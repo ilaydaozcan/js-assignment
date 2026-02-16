@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic+Guides&display=swap');
+
+main {
+  width: 800px;
+  background-color: #fff9e6;
+  border-radius: 10px;
+  border: 5px double #edb86d;
+  margin: 25px auto;
+}
+
+h1{
+  font-family: "Playwrite NZ Basic Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  position: relative;
+  list-style: none;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(40px) scale(0.9);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+li:first-child {
+  display: block;
+}
+
+button {
+  font-family:sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 30px;
+  background: #0c3818;
+  color: #fff;
+  border: 5px double #edb86d;
+  border-radius: 10px
+}
+
+.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) scale(1);
+  z-index: 10;
+}
+
+.disable {
+  cursor: default;
+  opacity: 0.5;
+}
+
+#count {
+  font-family:sans-serif;
+  font-size: 16px;
+  align-content: center;
+  align-self: center;
+}
